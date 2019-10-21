@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from datetime import datetime
 
 
-from rest_api_src.barometer.models import Measurement
+from rest_api_srv.barometer.models import Measurement
 
 
 class MeasurementStorage(ABC):

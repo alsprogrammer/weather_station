@@ -1,7 +1,7 @@
 from flask_restful import Resource, marshal
 
-from rest_api_src.rest_api.resources.representations.json_representations import pressure_measurement_repr
-from rest_api_src.rest_api.resources.parsers.pressure_parser import pressure_measurement_parser
+from rest_api_srv.rest_api.resources.representations.json_representations import pressure_measurement_repr
+from rest_api_srv.rest_api.resources.parsers.pressure_parser import pressure_measurement_parser
 
 
 class Pressure(Resource):

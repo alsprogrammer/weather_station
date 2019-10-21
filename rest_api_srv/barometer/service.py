@@ -1,9 +1,9 @@
 from datetime import datetime
 from typing import Union, List
 
-from rest_api_src.barometer.models import Measurement
-from rest_api_src.barometer.storages.storage_abc import MeasurementStorage
-from rest_api_src.barometer.utils.time_utils import get_current_timestamp
+from rest_api_srv.barometer.models import Measurement
+from rest_api_srv.barometer.storages.storage_abc import MeasurementStorage
+from rest_api_srv.barometer.utils.time_utils import get_current_timestamp
 
 
 class MeasurementService:
