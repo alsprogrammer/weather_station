@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from barometer.models import Measurement
-from barometer.storages.storage_abc import MeasurementStorage
+from measurement_service.models import Measurement
+from measurement_service.storages.storage_abc import MeasurementStorage
 
 
 class SQLMeasurementStorage(MeasurementStorage):
@@ -48,7 +48,7 @@ if __name__ == "__main__":
 
     c.execute('CREATE TABLE Pressure (timestamp INT, value INT);')
 
-    from barometer.models import PressureMeasurement
+    from measurement_service.models import PressureMeasurement
     storage = SQLMeasurementStorage(c, 'Pressure', PressureMeasurement)
 
     cur_measurement = PressureMeasurement(735)

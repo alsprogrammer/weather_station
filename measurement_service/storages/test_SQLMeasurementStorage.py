@@ -1,8 +1,8 @@
 from unittest import TestCase
 
-from barometer.models import PressureMeasurement
-from barometer.storages.SQLMeasurementStorage import SQLMeasurementStorage
-from barometer.storages.sqlite_cursor import get_sqlite_cursor
+from measurement_service.models import PressureMeasurement
+from measurement_service.storages.SQLMeasurementStorage import SQLMeasurementStorage
+from measurement_service.storages.sqlite_cursor import get_sqlite_cursor
 from utils.time_utils import get_current_timestamp
 
 

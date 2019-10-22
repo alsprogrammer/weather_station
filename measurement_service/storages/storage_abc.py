@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from datetime import datetime
 
 
-from barometer.models import Measurement
+from measurement_service.models import Measurement
 
 
 class MeasurementStorage(ABC):

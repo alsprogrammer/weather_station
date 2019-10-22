@@ -1,7 +1,7 @@
 import time
 
-from measurement_getter.getters.measurement_getter_abc import MeasurementGetter
-from measurement_getter.senders.sender_abc import MeasurementSender
+from measurement_updater.getters.measurement_getter_abc import MeasurementGetter
+from measurement_updater.senders.sender_abc import MeasurementSender
 from utils.time_utils import get_current_timestamp
 
 
