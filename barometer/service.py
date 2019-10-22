@@ -1,9 +1,9 @@
 from datetime import datetime
 from typing import Union, List
 
-from rest_api_srv.barometer.models import Measurement
-from rest_api_srv.barometer.storages.storage_abc import MeasurementStorage
-from rest_api_srv.barometer.utils.time_utils import get_current_timestamp
+from barometer.storages.storage_abc import MeasurementStorage
+from barometer.models import Measurement
+from utils.time_utils import get_current_timestamp
 
 
 class MeasurementService:
@@ -30,7 +30,8 @@ if __name__ == "__main__":
     db_cursor.execute('CREATE TABLE Pressure (timestamp INT, value INT);')
 
     from barometer.storages.SQLMeasurementStorage import SQLMeasurementStorage
-    from barometer.models import Measurement, PressureMeasurement
+    from barometer.models import Measurement, PressureMeasurement, Measurement, Measurement, Measurement
+
     pressure_storage = SQLMeasurementStorage(db_cursor, 'Pressure', PressureMeasurement)
     pressure_service = MeasurementService(pressure_storage, PressureMeasurement)
 

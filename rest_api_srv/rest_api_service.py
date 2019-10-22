@@ -1,10 +1,10 @@
 from flask import Flask
-from flask_restful import Api, Resource, reqparse, abort
+from flask_restful import Api
 
-from rest_api_srv.barometer.models import PressureMeasurement
-from rest_api_srv.barometer.service import MeasurementService
-from rest_api_srv.barometer.storages.SQLMeasurementStorage import SQLMeasurementStorage
-from rest_api_srv.barometer.storages.sqlite_cursor import get_sqlite_cursor
+from barometer.models import PressureMeasurement
+from barometer import MeasurementService
+from barometer.storages import SQLMeasurementStorage
+from barometer.storages import get_sqlite_cursor
 from rest_api_srv.rest_api.resources.pressure import *
 
 

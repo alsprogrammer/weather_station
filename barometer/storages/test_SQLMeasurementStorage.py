@@ -1,9 +1,9 @@
 from unittest import TestCase
 
-from rest_api_srv.barometer.models import PressureMeasurement
-from rest_api_srv.barometer.storages.SQLMeasurementStorage import SQLMeasurementStorage
-from rest_api_srv.barometer.storages.sqlite_cursor import get_sqlite_cursor
-from rest_api_srv.barometer.utils.time_utils import get_current_timestamp
+from barometer.models import PressureMeasurement
+from barometer.storages.SQLMeasurementStorage import SQLMeasurementStorage
+from barometer.storages.sqlite_cursor import get_sqlite_cursor
+from utils.time_utils import get_current_timestamp
 
 
 class TestSQLMeasurementStorage(TestCase):

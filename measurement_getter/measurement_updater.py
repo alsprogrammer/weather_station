@@ -1,7 +1,8 @@
 import time
 
-from getters.measurement_getter_abc import MeasurementGetter
-from senders.sender_abc import MeasurementSender
+from measurement_getter.getters.measurement_getter_abc import MeasurementGetter
+from measurement_getter.senders.sender_abc import MeasurementSender
+from utils.time_utils import get_current_timestamp
 
 
 class MeasurementUpdater:
@@ -11,5 +12,5 @@ class MeasurementUpdater:
 
     def get_and_send_measurement(self):
         measurement = self._getter()
-        timestamp = int(time.time() * 1000)
+        timestamp = get_current_timestamp()
         self._sender(measurement, timestamp)

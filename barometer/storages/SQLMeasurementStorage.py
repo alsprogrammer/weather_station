@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from rest_api_srv.barometer.models import Measurement
-from rest_api_srv.barometer.storages.storage_abc import MeasurementStorage
+from barometer.models import Measurement
+from barometer.storages.storage_abc import MeasurementStorage
 
 
 class SQLMeasurementStorage(MeasurementStorage):
