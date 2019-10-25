@@ -2,9 +2,9 @@ from flask import Flask
 from flask_restful import Api
 
 from measurement_service.models import PressureMeasurement
-from measurement_service import MeasurementService
-from measurement_service.storages import SQLMeasurementStorage
-from measurement_service.storages import get_sqlite_cursor
+from measurement_service.service import MeasurementService
+from measurement_service.storages.SQLMeasurementStorage import SQLMeasurementStorage
+from measurement_service.storages.sqlite_cursor import get_sqlite_cursor
 from rest_api_srv.rest_api.resources.pressure import *
 
 

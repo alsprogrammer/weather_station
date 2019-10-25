@@ -1,4 +1,4 @@
-from measurement_updater import MeasurementUpdater
+from measurement_updaters import MeasurementUpdater
 from senders.rest_api_sender import RESTApiMeasurementSender
 
 from config import *
