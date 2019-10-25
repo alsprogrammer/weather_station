@@ -22,5 +22,5 @@ class PressureList(Resource):
 
     def post(self):
         args = pressure_measurement_parser.parse_args()
-        new_measurement = self._pressure_service.create_measurement(args['value'], args['timestamp'])
+        new_measurement = self._pressure_service.create_measurement(args['value'], args.get('timestamp'))
         return marshal(new_measurement, pressure_measurement_repr), 201

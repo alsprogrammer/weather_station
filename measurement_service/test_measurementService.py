@@ -28,6 +28,17 @@ class TestMeasurementService(TestCase):
                                                           (timestamp,)).fetchone()[0]
         self.assertEqual(created_measurements_num, 1)
 
+    def test_create_measurement_wo_timestamp(self):
+        new_pressure = 600
+        count_query = 'SELECT Count(*) FROM Pressure;'
+        measurements_num = self.db_cursor.execute(count_query).fetchone()[0]
+        self.pressure_service.create_measurement(new_pressure)
+        measurements_num_after = self.db_cursor.execute(count_query).fetchone()[0]
+        self.assertEqual(measurements_num + 1, measurements_num_after)
+        created_measurements_num = self.db_cursor.execute('SELECT Count(*) FROM Pressure WHERE value=?;',
+                                                          (new_pressure,)).fetchone()[0]
+        self.assertEqual(created_measurements_num, 1)
+
     def test_last_n_measurements(self):
         count_query = 'SELECT Count(*) FROM Pressure;'
         measurements_num = self.db_cursor.execute(count_query).fetchone()[0]

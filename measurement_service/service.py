@@ -11,7 +11,7 @@ class MeasurementService:
         self._storage = storage
         self._measurement_class = measurement_class
 
-    def create_measurement(self, value: Union[int, float], timestamp: int) -> Measurement:
+    def create_measurement(self, value: Union[int, float], timestamp: int = None) -> Measurement:
         new_measurement = self._measurement_class(value, timestamp)
         self._storage.put_measurement(new_measurement)
 
